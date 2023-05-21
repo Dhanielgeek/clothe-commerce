@@ -1,0 +1,17 @@
+ const fetchproducts =  async()=>{
+        const res = await fetch('https://fakestoreapi.com/products')
+        // .then(res=>res.json())
+        // .then(json=>console.log(json))
+        const data = await res.json();
+        // console.log(data)
+        setproducts(data)
+    }
+    fetchproducts()
+
+
+
+      cart.map(item=> {
+            return(
+              <Cartitem key={item.key} item={item}/>
+            )
+          })
